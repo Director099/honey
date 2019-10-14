@@ -1,0 +1,27 @@
+.btn-group {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 25px;
+
+  &__list-link {
+    margin-top: 15px;
+  }
+
+  &__link {
+    display: inline-block;
+    color: #999;
+    font-size: @font-size--small-2;
+    margin-right: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: @color-pp;
+      text-decoration: underline;
+    }
+  }
+}

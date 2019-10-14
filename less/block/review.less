@@ -1,0 +1,89 @@
+.review {
+  background: url("img/hipster-bg.png") no-repeat left top;
+  background-size: contain;
+  overflow: hidden;
+  .padding-ident();
+
+  &__container {
+    .container();
+  }
+
+  &__title {
+    .font-h2();
+  }
+
+  &__tagline {
+    .tagline-h2();
+  }
+
+  &__img {
+    position: relative;
+    margin-top: 50px;
+
+    .img-fluid {
+      position: relative;
+      z-index: 2;
+      margin: 0 auto;
+    }
+  }
+
+  &__hip-3 {
+    display: none;
+
+    @media(min-width: @screen-lg) {
+      display: block;
+      position: absolute;
+      left: -52px;
+      bottom: 55px;
+      z-index: 0;
+    }
+  }
+
+  &__hip-2 {
+    position: absolute;
+    right: -5px;
+    top: 0px;
+    width: 22%;
+    transform: translateY(-5%) translateX(5%);
+    z-index: 9;
+
+    @media(min-width: @screen-xl) {
+      right: -25px;
+    }
+  }
+
+  &__hip-1 {
+    position: absolute;
+    top: 53.8%;
+    left: 0;
+    width: 22%;
+    transform: translateY(-50%) translateX(-21%);
+    z-index: 9;
+
+    @media(min-width: @screen-xl) {
+      top: 52.1%;
+      left: 0;
+      width: 22%;
+      transform: translateY(-50%) translateX(-15%);
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 94%;
+    max-width: 760px;
+    margin: 0 auto;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-fit: cover;
+    z-index: 0;
+
+    @media(min-width: @screen-xl) {
+      max-width: 880px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.what-say {
+  overflow: hidden;
+  .padding-ident();
+  padding-bottom: 105px;
+
+  &__container {
+    .container();
+  }
+
+  &__title {
+    .font-h2();
+  }
+
+  &__title-h3 {
+    .font-h3();
+    text-align: left;
+
+    @media(min-width: @screen-md) {
+      text-align: right;
+    }
+  }
+
+  &__tagline {
+    .tagline-h2();
+  }
+
+  &__row {
+    .row();
+    margin-top: 60px;
+
+    @media(min-width: @screen-lg) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__column {
+    .col(md, 4, 11);
+    margin-left: auto;
+
+    p {
+      font-size: @font-size--small-2;
+
+      @media(min-width: @screen-md) {
+        text-align: right;
+      }
+    }
+
+    @media(min-width: @screen-md) {
+      order: 2;
+    }
+  }
+}

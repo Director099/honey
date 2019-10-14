@@ -1,0 +1,66 @@
+.fullpage {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  padding: 15px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background: url("../img/bg-pattern-honey.png") repeat top / cover;
+  }
+}
+
+.fullpage__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 15px;
+  transform: translate(-50%, -50%);
+}
+
+.fullpage__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fullpage__header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  z-index: 9;
+
+  @media (min-width: @screen-lg) {
+    justify-content: flex-end;
+  }
+}
+
+.fullpage__parag {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 9px;
+}
+
+.fullpage__header a {
+  margin-left: 30px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

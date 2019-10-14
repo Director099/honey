@@ -1,0 +1,36 @@
+.about {
+  overflow: hidden;
+  .padding-ident();
+
+  &__container {
+    .container();
+  }
+
+  &__title {
+    .font-h2();
+  }
+
+  &__title-h3 {
+    .font-h2();
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  &__tagline {
+    .tagline-h2();
+  }
+
+  &__row {
+    .row();
+    margin-top: 40px;
+  }
+
+  &__column-text {
+    .col(lg, 4);
+  }
+
+  &__column-photo {
+    .col(lg, 8);
+    margin-left: auto;
+  }
+}

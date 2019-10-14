@@ -1,0 +1,39 @@
+.single-title {
+  .row();
+
+  &__column {
+    .col(lg, 3);
+  }
+
+  &__column-2 {
+    .col(lg, 9);
+
+    text-align: center;
+
+    @media(min-width: @screen-lg) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    .font-h2();
+    text-align: center;
+    transform: translateY(-7px);
+
+    @media(min-width: @screen-lg) {
+      text-align: left;
+    }
+  }
+
+  &__title-h3 {
+    text-align: center;
+
+    @media(min-width: @screen-lg) {
+      text-align: left;
+    }
+  }
+
+  &--color {
+    // color: @white;
+  }
+}

@@ -1,0 +1,133 @@
+.form-send {
+  margin-bottom: 15px;
+  width: 100%;
+
+  &__text {
+    display: block;
+    color: #929292;
+    margin-bottom: 10px;
+    font-size: @font-size--small;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @media(min-width: @screen-sm) {
+      text-align: left;
+      margin-left: 10px;
+    }
+  }
+
+  &__rel {
+    position: relative;
+  }
+
+  &__control {
+    max-width: 200px;
+    width: 100%;
+    padding: 14px 15px 14px 15px;
+    color: @white;
+    box-shadow: 0 0 10px 1px fade(@black, 20%);
+    border-radius: 50px;
+    border: none;
+    font-weight: 300;
+    background: @gray-darker-2;
+  }
+
+  &__checkbox {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    width: auto;
+    color: @white;
+    opacity: 0;
+    z-index: -1;
+    font-size: @font-size--small;
+    transition: @transition-time;
+
+    &.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    input {
+      display: none;
+
+      &:checked ~ label::before {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: -2px;
+        width: 4px;
+        height: 8px;
+        border-right: 1px solid @white;
+        border-bottom: 1px solid @white;
+        transform: rotate(45deg);
+        box-shadow: 2px 0 0 0 @bg-color, inset -2px 0 0 0 @bg-color;
+        z-index: 2;
+      }
+    }
+
+    label {
+      position: relative;
+      display: block;
+      padding-left: 17px;
+      margin-left: 15px;
+      transition: @transition-time;
+
+      a {
+        color: @color-pp;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: @border-radius;
+        border: 1px solid @white;
+      }
+      @media(min-width: @screen-sm) {
+        margin-left: -0px;
+      }
+    }
+
+    @media(min-width: @screen-sm) {
+      bottom: -30px;
+    }
+
+    @media(min-width: @screen-lg) {
+      margin-left: 0%;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
+    width: 43px;
+    height: 43px;
+    border-radius: 50px;
+    border: none;
+    background: @color-pp;
+
+    .icon {
+      margin-left: 5px;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 17px 2px rgba(255,68,18,.85);
+      outline: none;
+    }
+  }
+
+  @media(min-width: @screen-sm) {
+    max-width: 200px;
+    margin-bottom: 0;
+  }
+}
